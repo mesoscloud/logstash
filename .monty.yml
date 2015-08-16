@@ -1,0 +1,11 @@
+- build: 1.5.3/centos/7
+  image:
+    - mesoscloud/logstash:1.5.3-centos-7
+    - mesoscloud/logstash:1.5.3-centos
+    - mesoscloud/logstash:1.5.3
+    - mesoscloud/logstash:latest
+
+- build: 1.5.3/ubuntu/14.04
+  image:
+    - mesoscloud/logstash:1.5.3-ubuntu-14.04
+    - mesoscloud/logstash:1.5.3-ubuntu
