@@ -8,26 +8,26 @@ https://www.elastic.co/products/logstash
 
 ## CentOS
 
-[![](https://badge.imagelayers.io/mesoscloud/logstash:1.5.3-centos-7.svg)](https://imagelayers.io/?images=mesoscloud/logstash:1.5.3-centos-7)
+[![](https://badge.imagelayers.io/mesoscloud/logstash:1.5.4-centos-7.svg)](https://imagelayers.io/?images=mesoscloud/logstash:1.5.4-centos-7)
 
 e.g.
 
 ```
-docker run -d
--v /srv/events:/srv/events
--v /srv/logstash:/srv/logstash
---name=logstash --restart=always mesoscloud/logstash:1.5.3-centos-7 logstash -e 'input { file { path => "/srv/events/containers.log-*" codec => json sincedb_path => "/srv/logstash/sincedb" } } output { elasticsearch { } }'
+docker run -d \
+-v /srv/events:/srv/events \
+-v /srv/logstash:/srv/logstash \
+--name=logstash --restart=always mesoscloud/logstash:1.5.4-centos-7 logstash -e 'input { file { path => "/srv/events/containers.log-*" codec => json sincedb_path => "/srv/logstash/sincedb" } } output { elasticsearch { } }'
 ```
 
 ## Ubuntu
 
-[![](https://badge.imagelayers.io/mesoscloud/logstash:1.5.3-ubuntu-14.04.svg)](https://imagelayers.io/?images=mesoscloud/logstash:1.5.3-ubuntu-14.04)
+[![](https://badge.imagelayers.io/mesoscloud/logstash:1.5.4-ubuntu-14.04.svg)](https://imagelayers.io/?images=mesoscloud/logstash:1.5.4-ubuntu-14.04)
 
 e.g.
 
 ```
-docker run -d
--v /srv/events:/srv/events
--v /srv/logstash:/srv/logstash
---name=logstash --restart=always mesoscloud/logstash:1.5.3-ubuntu-14.04 logstash -e 'input { file { path => "/srv/events/containers.log-*" codec => json sincedb_path => "/srv/logstash/sincedb" } } output { elasticsearch { } }'
+docker run -d \
+-v /srv/events:/srv/events \
+-v /srv/logstash:/srv/logstash \
+--name=logstash --restart=always mesoscloud/logstash:1.5.4-ubuntu-14.04 logstash -e 'input { file { path => "/srv/events/containers.log-*" codec => json sincedb_path => "/srv/logstash/sincedb" } } output { elasticsearch { } }'
 ```
